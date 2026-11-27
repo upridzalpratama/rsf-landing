@@ -158,7 +158,12 @@ em.acc{font-family:var(--font-accent);font-style:italic;font-weight:600}
 .merch{background:#FFF7EE;border-radius:24px;padding:28px;display:grid;gap:12px;color:#1C1206}
 .merch b{font-family:var(--font-head);font-size:1.35rem}
 .merch p{margin:0;font-size:.95rem;color:#5A3C1E}
-.wa{border-top:1px dashed #E5BE94;padding-top:16px;margin-top:6px;display:grid;gap:6px}
+.merch-band{background:var(--peach)}
+.merch-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.merch-grid h2{font-size:clamp(1.9rem,4vw,2.8rem);font-weight:800;margin-top:8px;max-width:18ch}
+.merch-grid p:not(.eyebrow){color:var(--muted);margin-top:14px;max-width:46ch}
+@media (max-width:820px){.merch-grid{grid-template-columns:1fr;gap:28px}}
+.wa{display:grid;gap:6px}
 .wa small{font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#8A5A2B}
 .wa-num{font-family:var(--font-head);font-size:1.6rem;font-weight:800;font-variant-numeric:tabular-nums;user-select:all}
 .wa-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
@@ -359,6 +364,21 @@ footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:
   </div>
 </section>
 
+<section id="merch" class="merch-band">
+  <div class="wrap merch-grid">
+    <div>
+      <p class="eyebrow">Special merchandise</p>
+      <h2>Follow us and get RSF special merchandise</h2>
+      <p>Follow our accounts, show the follow to our team at the booth, and take home RSF special merchandise.</p>
+    </div>
+    <div class="socials">
+      <a href="https://www.instagram.com/researchsynergyfoundation/" target="_blank" rel="noopener"><small>Instagram</small>@researchsynergyfoundation</a>
+      <a href="https://www.instagram.com/temanpublikasi/" target="_blank" rel="noopener"><small>Instagram</small>@temanpublikasi</a>
+      <a href="https://www.youtube.com/@ResearchSynergyFoundation-rsf" target="_blank" rel="noopener"><small>YouTube</small>Research Synergy Foundation</a>
+    </div>
+  </div>
+</section>
+
 <section id="contact" class="cta">
   <div class="wrap cta-grid">
     <div>
@@ -366,8 +386,6 @@ footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:
       <p>Ask our admin about calls for papers, conference dates, coaching batches, or a partnership with your institution.</p>
     </div>
     <div class="merch">
-      <b>Ask us for special merchandise</b>
-      <p>Visiting our booth? Ask the team for RSF special merchandise.</p>
       <div class="wa">
         <small>Chat with RSF admin on WhatsApp</small>
         <span class="wa-num" id="wa-num">+62 811 227 479</span>
