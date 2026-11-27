@@ -4,4 +4,4 @@ Landing page introducing Research Synergy Foundation (RSF): what we do for insti
 
 Static HTML/CSS/JS. Open `index.html` in a browser.
 
-Activity photos and partner logos come from researchsynergy.org; journal covers from journals.researchsynergypress.com. Testimonials, F1000Research articles, and RSI products are still placeholders.
+Activity photos and partner logos come from researchsynergy.org; journal covers from journals.researchsynergypress.com. Business lines from scholaross.com and scalistic.io; e-courses from utas.me/temanpublikasi. Testimonials and F1000Research articles are still placeholders.
