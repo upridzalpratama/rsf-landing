@@ -48,7 +48,15 @@ em.acc{font-family:var(--font-accent);font-style:italic;font-weight:600}
 .hero::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1.2px,transparent 1.2px);background-size:18px 18px;pointer-events:none}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:22px;position:relative;z-index:1}
 .brand{display:flex;align-items:center;gap:10px;font-family:var(--font-head);font-weight:700;font-size:1.05rem;text-decoration:none}
-.brand-mark{width:36px;height:36px;border-radius:50%;background:var(--orange);display:grid;place-items:center;color:var(--teal-deep);font-weight:800;font-size:.85rem}
+.brand-pill{background:#fff;border-radius:999px;padding:6px 16px;display:flex;align-items:center}
+.brand-pill img{height:34px;width:auto;display:block}
+@media (max-width:560px){.brand-name{display:none}}
+.photo img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px;display:block;background:var(--ph1)}
+.cover img{width:100%;aspect-ratio:1410/2250;object-fit:cover;border-radius:4px 12px 12px 4px;display:block;box-shadow:0 10px 24px -12px rgba(8,52,60,.45);transition:transform .2s;background:var(--ph1)}
+.cover:hover img{transform:translateY(-4px)}
+.cover b{font-family:var(--font-head);font-size:1rem;color:var(--fg)}
+.logo img{max-height:56px;max-width:100%;width:auto;object-fit:contain}
+.logo.img{background:#fff}
 .nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:.9rem;color:var(--on-dark-muted)}
 .nav ul a{text-decoration:none}.nav ul a:hover{color:var(--on-dark)}
 @media (max-width:820px){.nav ul{display:none}}
@@ -163,7 +171,7 @@ footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:
 <header class="hero" id="top">
   <div class="wrap">
     <nav class="nav" aria-label="Main">
-      <a class="brand" href="#top"><span class="brand-mark">RSF</span>Research Synergy Foundation</a>
+      <a class="brand" href="#top" aria-label="Research Synergy Foundation home"><span class="brand-pill"><img src="assets/brand/rsf-logo-alt.png" alt="Research Synergy" width="140" height="86"></span><span class="brand-name">Research Synergy Foundation</span></a>
       <ul>
         <li><a href="#what-we-do">What We Do</a></li>
         <li><a href="#activities">Activities</a></li>
@@ -232,11 +240,18 @@ footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:
       <div class="car-ctrl" data-for="car-photos"><button type="button" aria-label="Previous photos">←</button><button type="button" aria-label="Next photos">→</button></div>
     </div>
     <div class="car photos"><div class="car-track" id="car-photos">
-      <figure class="photo"><div class="ph">Activity photo 1</div><figcaption><b>International conference, opening session</b><span>City, 2025</span></figcaption></figure>
-      <figure class="photo"><div class="ph">Activity photo 2</div><figcaption><b>MoU signing with partner university</b><span>City, 2025</span></figcaption></figure>
-      <figure class="photo"><div class="ph">Activity photo 3</div><figcaption><b>Publication coaching workshop</b><span>City, 2025</span></figcaption></figure>
-      <figure class="photo"><div class="ph">Activity photo 4</div><figcaption><b>Parallel presentation session</b><span>City, 2025</span></figcaption></figure>
-      <figure class="photo"><div class="ph">Activity photo 5</div><figcaption><b>Campus visit and guest lecture</b><span>City, 2025</span></figcaption></figure>
+      <figure class="photo"><img src="assets/photos/01.jpg" alt="Panel discussion on stage at IC-SMS" loading="lazy"><figcaption><b>Plenary panel at IC-SMS</b><span>Conference</span></figcaption></figure>
+      <figure class="photo"><img src="assets/photos/02.jpg" alt="Conference participants in a group photo" loading="lazy"><figcaption><b>Group photo with conference participants</b><span>Conference</span></figcaption></figure>
+      <figure class="photo"><img src="assets/photos/03.jpg" alt="Presenters at laptops during parallel sessions" loading="lazy"><figcaption><b>Parallel presentation sessions</b><span>Conference</span></figcaption></figure>
+      <figure class="photo"><img src="assets/photos/04.jpg" alt="Award presented on stage" loading="lazy"><figcaption><b>Award presentation for presenters</b><span>Conference</span></figcaption></figure>
+      <figure class="photo"><img src="assets/photos/05.jpg" alt="Participants raising hands in a conference hall" loading="lazy"><figcaption><b>International conference participants</b><span>Conference</span></figcaption></figure>
+      <figure class="photo"><img src="assets/photos/06.jpg" alt="Grid of participants in a virtual ICMRSI session" loading="lazy"><figcaption><b>ICMRSI virtual session</b><span>Online</span></figcaption></figure>
+      <figure class="photo"><img src="assets/photos/07.jpg" alt="Online coaching session with LSPU Philippines" loading="lazy"><figcaption><b>Coaching with LSPU Philippines</b><span>Coaching</span></figcaption></figure>
+      <figure class="photo"><img src="assets/photos/08.jpg" alt="Keynote speaker on screen at IC-SMS" loading="lazy"><figcaption><b>Keynote session at IC-SMS</b><span>Conference</span></figcaption></figure>
+      <figure class="photo"><img src="assets/photos/09.jpg" alt="Partner delegation at the RSF office" loading="lazy"><figcaption><b>Partner visit to the RSF office</b><span>Partnership</span></figcaption></figure>
+      <figure class="photo"><img src="assets/photos/10.jpg" alt="Partners holding RSF merchandise bags" loading="lazy"><figcaption><b>Partner visit with RSF merchandise</b><span>Partnership</span></figcaption></figure>
+      <figure class="photo"><img src="assets/photos/11.jpg" alt="Workshop participants in a group photo" loading="lazy"><figcaption><b>Research workshop</b><span>Workshop</span></figcaption></figure>
+      <figure class="photo"><img src="assets/photos/12.jpg" alt="Registration desk at an outdoor event" loading="lazy"><figcaption><b>Event registration desk</b><span>Conference</span></figcaption></figure>
     </div></div>
   </div>
 </section>
@@ -244,20 +259,34 @@ footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:
 <section id="press">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="eyebrow">Research Synergy Press</p><h2>Our journals</h2></div>
+      <div><p class="eyebrow">Research Synergy Press</p><h2>20 open access journals</h2></div>
       <div class="car-ctrl" data-for="car-journals"><button type="button" aria-label="Previous journals">←</button><button type="button" aria-label="Next journals">→</button></div>
     </div>
     <div class="car journals"><div class="car-track" id="car-journals">
-      <a class="cover" href="#press"><div class="ph"><b>IJMESH</b><span>Cover</span></div><small>International Journal of Multidisciplinary Education, Sciences and Humanities</small></a>
-      <a class="cover" href="#press"><div class="ph"><b>Journal 2</b><span>Cover</span></div><small>Journal title</small></a>
-      <a class="cover" href="#press"><div class="ph"><b>Journal 3</b><span>Cover</span></div><small>Journal title</small></a>
-      <a class="cover" href="#press"><div class="ph"><b>Journal 4</b><span>Cover</span></div><small>Journal title</small></a>
-      <a class="cover" href="#press"><div class="ph"><b>Journal 5</b><span>Cover</span></div><small>Journal title</small></a>
-      <a class="cover" href="#press"><div class="ph"><b>Journal 6</b><span>Cover</span></div><small>Journal title</small></a>
+      <a class="cover" href="https://journals.researchsynergypress.com/index.php/ijmesh" target="_blank" rel="noopener"><img src="assets/journals/ijmesh.jpg" alt="International Journal of Management, Entrepreneurship, Social Science and Humanities cover" loading="lazy"><b>IJMESH</b><small>International Journal of Management, Entrepreneurship, Social Science and Humanities</small></a>
+      <a class="cover" href="https://journals.researchsynergypress.com/index.php/ajosed" target="_blank" rel="noopener"><img src="assets/journals/ajosed.jpg" alt="Advanced Journal of STEM Education cover" loading="lazy"><b>AJOSED</b><small>Advanced Journal of STEM Education</small></a>
+      <a class="cover" href="https://journals.researchsynergypress.com/index.php/pba" target="_blank" rel="noopener"><img src="assets/journals/pba.jpg" alt="People and Behavior Analysis cover" loading="lazy"><b>PBA</b><small>People and Behavior Analysis</small></a>
+      <a class="cover" href="https://journals.researchsynergypress.com/index.php/epd" target="_blank" rel="noopener"><img src="assets/journals/epd.jpg" alt="Education Policy and Development cover" loading="lazy"><b>EPD</b><small>Education Policy and Development</small></a>
+      <a class="cover" href="https://journals.researchsynergypress.com/index.php/ijmadic" target="_blank" rel="noopener"><img src="assets/journals/ijmadic.jpg" alt="International Journal of Marketing and Digital Creative cover" loading="lazy"><b>IJMADIC</b><small>International Journal of Marketing and Digital Creative</small></a>
+      <a class="cover" href="https://journals.researchsynergypress.com/index.php/aqr" target="_blank" rel="noopener"><img src="assets/journals/aqr.jpg" alt="Advanced Qualitative Research cover" loading="lazy"><b>AQR</b><small>Advanced Qualitative Research</small></a>
+      <a class="cover" href="https://journals.researchsynergypress.com/index.php/hsc" target="_blank" rel="noopener"><img src="assets/journals/hsc.jpg" alt="Humanities, Society, and Community cover" loading="lazy"><b>HSC</b><small>Humanities, Society, and Community</small></a>
+      <a class="cover" href="https://journals.researchsynergypress.com/index.php/jess" target="_blank" rel="noopener"><img src="assets/journals/jess.jpg" alt="Journal of Elementary and Secondary School cover" loading="lazy"><b>JESS</b><small>Journal of Elementary and Secondary School</small></a>
+      <a class="cover" href="https://journals.researchsynergypress.com/index.php/jhasib" target="_blank" rel="noopener"><img src="assets/journals/jhasib.jpg" alt="Journal of Halal Science, Industry, and Business cover" loading="lazy"><b>JHASIB</b><small>Journal of Halal Science, Industry, and Business</small></a>
+      <a class="cover" href="https://journals.researchsynergypress.com/index.php/jhbs" target="_blank" rel="noopener"><img src="assets/journals/jhbs.jpg" alt="Journal of Healthcare and Biomedical Science cover" loading="lazy"><b>JHBS</b><small>Journal of Healthcare and Biomedical Science</small></a>
+      <a class="cover" href="https://journals.researchsynergypress.com/index.php/lomr" target="_blank" rel="noopener"><img src="assets/journals/lomr.jpg" alt="Logistic and Operation Management Research cover" loading="lazy"><b>LOMR</b><small>Logistic and Operation Management Research</small></a>
+      <a class="cover" href="https://journals.researchsynergypress.com/index.php/ijeiis" target="_blank" rel="noopener"><img src="assets/journals/ijeiis.jpg" alt="International Journal of Emerging Issues in Islamic Studies cover" loading="lazy"><b>IJEIIS</b><small>International Journal of Emerging Issues in Islamic Studies</small></a>
+      <a class="cover" href="https://journals.researchsynergypress.com/index.php/jsetp" target="_blank" rel="noopener"><img src="assets/journals/jsetp.jpg" alt="Journal of Social Entrepreneurship Theory and Practice cover" loading="lazy"><b>JSETP</b><small>Journal of Social Entrepreneurship Theory and Practice</small></a>
+      <a class="cover" href="https://journals.researchsynergypress.com/index.php/aqa" target="_blank" rel="noopener"><img src="assets/journals/aqa.jpg" alt="Applied Quantitative Analysis cover" loading="lazy"><b>AQA</b><small>Applied Quantitative Analysis</small></a>
+      <a class="cover" href="https://journals.researchsynergypress.com/index.php/issues" target="_blank" rel="noopener"><img src="assets/journals/issues.jpg" alt="Inclusive Society and Sustainability Studies cover" loading="lazy"><b>ISSUES</b><small>Inclusive Society and Sustainability Studies</small></a>
+      <a class="cover" href="https://journals.researchsynergypress.com/index.php/jgrcs" target="_blank" rel="noopener"><img src="assets/journals/jgrcs.jpg" alt="Journal of Governance, Risk, Management, Compliance and Sustainability cover" loading="lazy"><b>JGRCS</b><small>Journal of Governance, Risk, Management, Compliance and Sustainability</small></a>
+      <a class="cover" href="https://journals.researchsynergypress.com/index.php/ijebce" target="_blank" rel="noopener"><img src="assets/journals/ijebce.jpg" alt="International Journal of Entrepreneurship, Business, and Creative Economy cover" loading="lazy"><b>IJEBCE</b><small>International Journal of Entrepreneurship, Business, and Creative Economy</small></a>
+      <a class="cover" href="https://journals.researchsynergypress.com/index.php/ajsbr" target="_blank" rel="noopener"><img src="assets/journals/ajsbr.jpg" alt="Asian Journal of Social and Behavioral Research cover" loading="lazy"><b>AJSBR</b><small>Asian Journal of Social and Behavioral Research</small></a>
+      <a class="cover" href="https://journals.researchsynergypress.com/index.php/csi" target="_blank" rel="noopener"><img src="assets/journals/csi.jpg" alt="Community Service Insight cover" loading="lazy"><b>CSI</b><small>Community Service Insight</small></a>
+      <a class="cover" href="https://journals.researchsynergypress.com/index.php/smber" target="_blank" rel="noopener"><img src="assets/journals/smber.jpg" alt="Strategic Management, Business, and Economics Review cover" loading="lazy"><b>SMBER</b><small>Strategic Management, Business, and Economics Review</small></a>
     </div></div>
     <div class="idx-band">
-      <h3>Indexed in</h3>
-      <span class="chip">Index logo 1</span><span class="chip">Index logo 2</span><span class="chip">Index logo 3</span><span class="chip">Index logo 4</span><span class="chip">Index logo 5</span><span class="chip">Index logo 6</span>
+      <h3>Indexed and abstracted in</h3>
+      <span class="chip">SINTA 3–5</span><span class="chip">Copernicus</span><span class="chip">EBSCO</span><span class="chip">ProQuest</span><span class="chip">Crossref</span><span class="chip">Dimensions</span><span class="chip">Google Scholar</span><span class="chip">Garuda</span><span class="chip">OpenAlex</span><span class="chip">Scilit</span><span class="chip">WorldCat</span><span class="chip">HOLLIS (Harvard Library)</span>
     </div>
   </div>
 </section>
@@ -314,7 +343,7 @@ footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:
       <p>Universities, publishers, and research platforms that have partnered with RSF.</p>
     </div>
     <div class="logos">
-      <div class="logo">F1000Research</div><div class="logo">ScholarVein</div><div class="logo">Reviewer Track</div><div class="logo">Global Research Community</div><div class="logo">Trinka</div><div class="logo">Partner logo</div><div class="logo">Partner logo</div><div class="logo">Partner logo</div><div class="logo">Partner logo</div><div class="logo">Partner logo</div><div class="logo">Partner logo</div><div class="logo">Partner logo</div>
+      <div class="logo img"><img src="assets/partners/f1000research.png" alt="F1000Research" loading="lazy"></div><div class="logo img"><img src="assets/partners/emerald.png" alt="Emerald Publishing" loading="lazy"></div><div class="logo img"><img src="assets/partners/telkom.png" alt="Telkom Indonesia" loading="lazy"></div><div class="logo img"><img src="assets/partners/telkom-university.png" alt="Telkom University" loading="lazy"></div><div class="logo img"><img src="assets/partners/ucsi.png" alt="UCSI University" loading="lazy"></div><div class="logo img"><img src="assets/partners/mmu.jpg" alt="Multimedia University" loading="lazy"></div><div class="logo img"><img src="assets/partners/aou.png" alt="Arab Open University" loading="lazy"></div><div class="logo img"><img src="assets/partners/siu.png" alt="SIU" loading="lazy"></div><div class="logo img"><img src="assets/partners/ecu.png" alt="ECU" loading="lazy"></div><div class="logo img"><img src="assets/partners/unair.png" alt="Universitas Airlangga" loading="lazy"></div><div class="logo img"><img src="assets/partners/uii.png" alt="Universitas Islam Indonesia" loading="lazy"></div><div class="logo img"><img src="assets/partners/nwu.jpeg" alt="Northwestern University Philippines" loading="lazy"></div><div class="logo img"><img src="assets/partners/modul-dubai.png" alt="Modul University Dubai" loading="lazy"></div><div class="logo img"><img src="assets/partners/binus.png" alt="BINUS University" loading="lazy"></div><div class="logo img"><img src="assets/partners/ut.png" alt="Universitas Terbuka" loading="lazy"></div><div class="logo img"><img src="assets/partners/paramadina.png" alt="Universitas Paramadina" loading="lazy"></div><div class="logo img"><img src="assets/partners/fia-ui.png" alt="FIA Universitas Indonesia" loading="lazy"></div><div class="logo img"><img src="assets/partners/uia.png" alt="UIA" loading="lazy"></div><div class="logo img"><img src="assets/partners/umj.png" alt="UMJ" loading="lazy"></div><div class="logo img"><img src="assets/partners/polines.png" alt="Politeknik Negeri Semarang" loading="lazy"></div><div class="logo img"><img src="assets/partners/perbanas.png" alt="Perbanas" loading="lazy"></div><div class="logo img"><img src="assets/partners/seara.png" alt="SEARA" loading="lazy"></div><div class="logo img"><img src="assets/partners/wcc.png" alt="WCC" loading="lazy"></div><div class="logo img"><img src="assets/partners/ipes.png" alt="IPES BS" loading="lazy"></div>
     </div>
   </div>
 </section>
