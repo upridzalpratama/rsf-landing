@@ -158,6 +158,13 @@ em.acc{font-family:var(--font-accent);font-style:italic;font-weight:600}
 .merch{background:#FFF7EE;border-radius:24px;padding:28px;display:grid;gap:12px;color:#1C1206}
 .merch b{font-family:var(--font-head);font-size:1.35rem}
 .merch p{margin:0;font-size:.95rem;color:#5A3C1E}
+.wa{border-top:1px dashed #E5BE94;padding-top:16px;margin-top:6px;display:grid;gap:6px}
+.wa small{font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#8A5A2B}
+.wa-num{font-family:var(--font-head);font-size:1.6rem;font-weight:800;font-variant-numeric:tabular-nums;user-select:all}
+.wa-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.wa .btn{padding:11px 20px;font-family:inherit;cursor:pointer;background:transparent}
+.wa .btn-dark{background:#0F2B31;color:#fff}
+.wa .btn-line{border-color:#1C1206;color:#1C1206}
 .socials{display:grid;gap:8px}
 .socials a{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:12px 16px;border-radius:14px;background:#FFE3C7;font-size:.92rem;font-weight:600;text-decoration:none;color:#1C1206;transition:background .15s;min-width:0;overflow-wrap:anywhere}
 .socials a:hover{background:#FFD3A8}
@@ -356,19 +363,18 @@ footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:
   <div class="wrap cta-grid">
     <div>
       <h2>Find out what we can do for you</h2>
-      <p>Follow RSF for new calls for papers, conference dates, and coaching batches. Or message our team to discuss a partnership.</p>
-      <div class="btns">
-        <a class="btn btn-dark" href="https://www.instagram.com/researchsynergyfoundation/" target="_blank" rel="noopener">Follow us on Instagram</a>
-        <a class="btn btn-line" href="#contact">Contact our team</a>
-      </div>
+      <p>Ask our admin about calls for papers, conference dates, coaching batches, or a partnership with your institution.</p>
     </div>
     <div class="merch">
       <b>Ask us for special merchandise</b>
-      <p>Visiting our booth? Follow our accounts and ask the team for RSF special merchandise.</p>
-      <div class="socials">
-        <a href="https://www.instagram.com/researchsynergyfoundation/" target="_blank" rel="noopener"><small>Instagram</small>@researchsynergyfoundation</a>
-        <a href="https://www.instagram.com/temanpublikasi/" target="_blank" rel="noopener"><small>Instagram</small>@temanpublikasi</a>
-        <a href="https://www.youtube.com/@ResearchSynergyFoundation-rsf" target="_blank" rel="noopener"><small>YouTube</small>Research Synergy Foundation</a>
+      <p>Visiting our booth? Ask the team for RSF special merchandise.</p>
+      <div class="wa">
+        <small>Chat with RSF admin on WhatsApp</small>
+        <span class="wa-num" id="wa-num">+62 811 227 479</span>
+        <div class="wa-actions">
+          <a class="btn btn-dark" href="https://wa.me/62811227479" target="_blank" rel="noopener">Chat on WhatsApp</a>
+          <button type="button" class="btn btn-line" id="wa-copy">Copy number</button>
+        </div>
       </div>
     </div>
   </div>
@@ -378,6 +384,11 @@ footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:
 <footer class="site"><div class="wrap"><span>© 2026 Research Synergy Foundation</span><span class="site-links"><a href="https://www.instagram.com/researchsynergyfoundation/" target="_blank" rel="noopener">Instagram</a><a href="https://www.youtube.com/@ResearchSynergyFoundation-rsf" target="_blank" rel="noopener">YouTube</a><a href="https://www.instagram.com/temanpublikasi/" target="_blank" rel="noopener">Teman Publikasi</a><a href="https://www.researchsynergy.org/" target="_blank" rel="noopener">researchsynergy.org</a></span></div></footer>
 
 <script>
+(function(){var b=document.getElementById('wa-copy');if(!b)return;b.addEventListener('click',function(){
+  var n='+62 811 227 479';function done(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy number'},1600)}
+  function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('wa-num'));var s=getSelection();s.removeAllRanges();s.addRange(r)}
+  try{navigator.clipboard.writeText(n).then(done,sel)}catch(e){sel()}
+})})();
 document.querySelectorAll('.car-ctrl').forEach(function(c){
   var t=document.getElementById(c.dataset.for); var b=c.querySelectorAll('button');
   function step(){var f=t.firstElementChild;return f?f.getBoundingClientRect().width+18:300}
