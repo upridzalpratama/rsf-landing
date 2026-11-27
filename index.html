@@ -169,7 +169,11 @@ em.acc{font-family:var(--font-accent);font-style:italic;font-weight:600}
 .reel-body span{font-size:.88rem;color:var(--muted)}
 .reel-body .reel-cta{color:var(--orange-red);font-weight:600;margin-top:6px}
 @media (max-width:560px){.reel{grid-template-columns:1fr}}
-.article{display:grid;grid-template-columns:auto 1fr;gap:16px;padding:18px 20px;border-radius:16px;background:var(--bg-soft);align-items:start}
+.article{text-decoration:none;color:var(--fg);transition:background .15s;display:grid;grid-template-columns:auto 1fr;gap:16px;padding:18px 20px;border-radius:16px;background:var(--card);border:1px solid var(--line);align-items:start}
+.article:hover{background:var(--peach)}
+.article:hover b{text-decoration:underline}
+.all-articles{font-weight:600;color:var(--orange-red);text-decoration:none;padding:4px 2px}
+.all-articles:hover{text-decoration:underline}
 .article .lbl{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--orange-red);padding-top:3px}
 .article b{font-weight:600;display:block}
 .article span{font-size:.85rem;color:var(--muted)}
@@ -353,8 +357,11 @@ footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:
           <span class="reel-thumb"><img src="assets/testimonials/f1000-coaching-reel.jpg" alt="Video testimonial from a Coaching Clinic F1000Research participant" loading="lazy"><span class="play" aria-hidden="true"></span></span>
           <span class="reel-body"><span class="lbl">Video testimonial</span><b>dr. Elvine Gunawan, Sp. KJ</b><span>Participant, Coaching Clinic F1000Research – RSF Gateway</span><span class="reel-cta">Watch on Instagram →</span></span>
         </a>
-        <div class="article"><span class="lbl">Article</span><div><b>Title of a published article in the RSF gateway</b><span>Author et al. · F1000Research · 2025</span></div></div>
-        <div class="article"><span class="lbl">Article</span><div><b>Title of a published article in the RSF gateway</b><span>Author et al. · F1000Research · 2025</span></div></div>
+        <a class="article" href="https://f1000research.com/articles/15-1796" target="_blank" rel="noopener"><span class="lbl">Article</span><div><b>Budget Performance in the Indonesian Public Sector: The Roles of Preparation, Deviation, and Human Resource Competence</b><span>Pratiwi et al. · 2026 · Peer review: 2 approved</span></div></a>
+        <a class="article" href="https://f1000research.com/articles/15-283" target="_blank" rel="noopener"><span class="lbl">Article</span><div><b>Gamification as an Effective Strategy for Improving Primary School Students&#39; Social Skills</b><span>Alpian et al. · 2026 · Peer review: 2 approved, 3 approved with reservations</span></div></a>
+        <a class="article" href="https://f1000research.com/articles/15-946" target="_blank" rel="noopener"><span class="lbl">Article</span><div><b>Trust as an Omnichannel-to-Advocacy Transmission Mechanism in Mandatory Health care Services: Empirical Evidence from Indonesia</b><span>Suryanegara et al. · 2026 · Peer review: 2 approved, 2 approved with reservations</span></div></a>
+        <a class="article" href="https://f1000research.com/articles/15-51" target="_blank" rel="noopener"><span class="lbl">Article</span><div><b>Web of Power in the Struggle for Access Rights to Forest Resources: Comparative Case Studies in Conservation and Industrial Forests</b><span>Rahmawati et al. · 2026 · Peer review: 1 approved, 2 approved with reservations</span></div></a>
+        <a class="all-articles" href="https://f1000research.com/gateways/rsf" target="_blank" rel="noopener">Browse all articles in the RSF gateway on F1000Research →</a>
       </div>
     </div>
   </div>
