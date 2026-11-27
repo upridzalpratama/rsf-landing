@@ -157,6 +157,18 @@ em.acc{font-family:var(--font-accent);font-style:italic;font-weight:600}
 .quote footer{display:flex;align-items:center;gap:12px;font-size:.85rem;color:var(--muted)}
 .quote footer i{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--ph1),var(--ph2));flex:none}
 .quote footer b{color:var(--fg);display:block}
+.reel{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:0;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--card);text-decoration:none;color:var(--fg);transition:border-color .2s}
+.reel:hover{border-color:var(--orange)}
+.reel-thumb{position:relative;display:block;background:var(--ph1)}
+.reel-thumb img{width:100%;height:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.play{position:absolute;inset:0;margin:auto;width:58px;height:58px;border-radius:50%;background:var(--orange);box-shadow:0 6px 20px rgba(0,0,0,.25)}
+.play::after{content:"";position:absolute;left:23px;top:18px;border-left:16px solid #1C1206;border-top:11px solid transparent;border-bottom:11px solid transparent}
+.reel-body{padding:20px;display:flex;flex-direction:column;gap:6px;justify-content:center}
+.reel-body .lbl{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--orange-red)}
+.reel-body b{font-family:var(--font-head);font-size:1.15rem}
+.reel-body span{font-size:.88rem;color:var(--muted)}
+.reel-body .reel-cta{color:var(--orange-red);font-weight:600;margin-top:6px}
+@media (max-width:560px){.reel{grid-template-columns:1fr}}
 .article{display:grid;grid-template-columns:auto 1fr;gap:16px;padding:18px 20px;border-radius:16px;background:var(--bg-soft);align-items:start}
 .article .lbl{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--orange-red);padding-top:3px}
 .article b{font-weight:600;display:block}
@@ -334,17 +346,13 @@ footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:
         <span class="badge">Official Gateway</span>
         <h3>Research Synergy Foundation Gateway</h3>
         <p>Articles go online fast, then receive open, invited peer review. Our coaches help you prepare a manuscript that meets F1000Research guidelines.</p>
-        <div class="btns" style="margin-top:4px"><a class="btn btn-primary" href="#contact">Join the coaching</a></div>
+        <div class="btns" style="margin-top:4px"><a class="btn btn-primary" href="https://utas.me/temanpublikasi/mini-coaching-clinic-f1000research-nzaw9uxc" target="_blank" rel="noopener">Join the Coaching Clinic</a></div>
       </div>
       <div class="gw-list">
-        <blockquote class="quote" style="margin:0">
-          <p>"Coaching testimonial goes here: what the participant struggled with and how the coaching helped them publish."</p>
-          <footer><i></i><div><b>Participant name</b>University, Country</div></footer>
-        </blockquote>
-        <blockquote class="quote" style="margin:0">
-          <p>"Second testimonial from a coaching participant."</p>
-          <footer><i></i><div><b>Participant name</b>University, Country</div></footer>
-        </blockquote>
+        <a class="reel" href="https://www.instagram.com/reel/DYCDnnyBI5N/" target="_blank" rel="noopener">
+          <span class="reel-thumb"><img src="assets/testimonials/f1000-coaching-reel.jpg" alt="Video testimonial from a Coaching Clinic F1000Research participant" loading="lazy"><span class="play" aria-hidden="true"></span></span>
+          <span class="reel-body"><span class="lbl">Video testimonial</span><b>dr. Elvine Gunawan, Sp. KJ</b><span>Participant, Coaching Clinic F1000Research – RSF Gateway</span><span class="reel-cta">Watch on Instagram →</span></span>
+        </a>
         <div class="article"><span class="lbl">Article</span><div><b>Title of a published article in the RSF gateway</b><span>Author et al. · F1000Research · 2025</span></div></div>
         <div class="article"><span class="lbl">Article</span><div><b>Title of a published article in the RSF gateway</b><span>Author et al. · F1000Research · 2025</span></div></div>
       </div>
@@ -394,10 +402,10 @@ footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:
       <a class="prod" href="https://utas.me/temanpublikasi/e-course-strategi-mendapatkan-hibah-pendanaan-nasional-uz4afzje" target="_blank" rel="noopener"><img src="assets/products/06.jpg" alt="Strategi Mendapatkan Hibah Pendanaan Nasional" loading="lazy"><div class="body"><span class="kind">E-Course</span><h3>Strategi Mendapatkan Hibah Pendanaan Nasional</h3></div></a>
       <a class="prod" href="https://utas.me/temanpublikasi/e-course-beyond-data-menangkap-makna-melalui-pendekatan-kualitatif-atdszkte" target="_blank" rel="noopener"><img src="assets/products/07.jpg" alt="Beyond Data: Menangkap Makna melalui Pendekatan Kualitatif" loading="lazy"><div class="body"><span class="kind">E-Course</span><h3>Beyond Data: Menangkap Makna melalui Pendekatan Kualitatif</h3></div></a>
       <a class="prod" href="https://utas.me/temanpublikasi/survival-kitsystematic-literature-review--zkwigxh9" target="_blank" rel="noopener"><img src="assets/products/08.jpg" alt="Survival Kit Systematic Literature Review (SLR)" loading="lazy"><div class="body"><span class="kind">Bundle</span><h3>Survival Kit Systematic Literature Review (SLR)</h3></div></a>
-      <a class="prod" href="https://utas.me/temanpublikasi/e-course-intensive-class--level-up-hibah-internasional-penyusunan-proposal-riset-kolaboratif-global-vxpqlmno" target="_blank" rel="noopener"><img src="assets/products/09.jpg" alt="Level-Up Hibah Internasional: Penyusunan Proposal Riset Kolaboratif Global" loading="lazy"><div class="body"><span class="kind">Intensive Class</span><h3>Level-Up Hibah Internasional: Penyusunan Proposal Riset Kolaboratif Global</h3></div></a>
+      <a class="prod" href="https://utas.me/temanpublikasi/e-course-intensive-class--level-up-hibah-internasional-penyusunan-proposal-riset-kolaboratif-global-vxpqlmno" target="_blank" rel="noopener"><img src="assets/products/09.jpg" alt="Level-Up Hibah Internasional: Penyusunan Proposal Riset Kolaboratif Global" loading="lazy"><div class="body"><span class="kind">E-Course</span><h3>Level-Up Hibah Internasional: Penyusunan Proposal Riset Kolaboratif Global</h3></div></a>
       <a class="prod" href="https://utas.me/temanpublikasi/e-course-webinar-cara-cerdas-menyusun-kuesioner-berbasis-teori-yang-valid-dan-reliable-1nakbrnx" target="_blank" rel="noopener"><img src="assets/products/10.jpg" alt="Cara Cerdas Menyusun Kuesioner Berbasis Teori yang Valid dan Reliable" loading="lazy"><div class="body"><span class="kind">E-Course</span><h3>Cara Cerdas Menyusun Kuesioner Berbasis Teori yang Valid dan Reliable</h3></div></a>
       <a class="prod" href="https://utas.me/temanpublikasi/e-course-dari-lokal-ke-global-meningkatkan-peluang-riset-melalui-hibah-penelitian-internasional-tewcvpvi" target="_blank" rel="noopener"><img src="assets/products/11.jpg" alt="Dari Lokal ke Global: Meningkatkan Peluang Riset Melalui Hibah Penelitian Internasional" loading="lazy"><div class="body"><span class="kind">E-Course</span><h3>Dari Lokal ke Global: Meningkatkan Peluang Riset Melalui Hibah Penelitian Internasional</h3></div></a>
-      <a class="prod" href="https://utas.me/temanpublikasi/e-course-intensive-class-membedah-data-kualitatif-teknik-analisis-dan-interpretasi-mendalam-ukgeqfp5" target="_blank" rel="noopener"><img src="assets/products/12.jpg" alt="Membedah Data Kualitatif: Teknik, Analisis, dan Interpretasi Mendalam" loading="lazy"><div class="body"><span class="kind">Intensive Class</span><h3>Membedah Data Kualitatif: Teknik, Analisis, dan Interpretasi Mendalam</h3></div></a>
+      <a class="prod" href="https://utas.me/temanpublikasi/e-course-intensive-class-membedah-data-kualitatif-teknik-analisis-dan-interpretasi-mendalam-ukgeqfp5" target="_blank" rel="noopener"><img src="assets/products/12.jpg" alt="Membedah Data Kualitatif: Teknik, Analisis, dan Interpretasi Mendalam" loading="lazy"><div class="body"><span class="kind">E-Course</span><h3>Membedah Data Kualitatif: Teknik, Analisis, dan Interpretasi Mendalam</h3></div></a>
     </div></div>
   </div>
 </section>
